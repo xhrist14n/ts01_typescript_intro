@@ -1,0 +1,17 @@
+
+interface Person {
+    firstName: string;
+    lastName: string;
+}
+
+function greeter(person: Person) {
+    return "Hello, " + person.firstName + " " + person.lastName;
+}
+
+var user = { firstName: "Juan", lastName: "Marcus" };
+
+document.body.innerHTML = greeter(user);
+for(var i=0;i<1000;i++){
+	user = { firstName: "Samudio", lastName: "Lopez" };
+	document.body.innerHTML += "<br>" + greeter(user);
+}
